@@ -44,16 +44,15 @@ struct ContentView: View {
                 })
                 .padding()
                 
-                Text("Selected country: \(selectedCountry)")
-                Picker(selection: $selectedCountry) {
-                    Text("Choose country")
-                    ForEach(countries, id: \.self) { country in
-                        Text(country)
+                List {
+                    Picker("Choose country", selection: $selectedCountry) {
+                        
+                        ForEach(countries, id: \.self) { country in
+                            Text(country)
+                        }
                     }
-                } label: {
-                    
+                    .pickerStyle(.wheel)
                 }
-                .pickerStyle(.inline)
 
                 
                 Spacer()
