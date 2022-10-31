@@ -51,6 +51,9 @@
 		5C899308290E9073004C872C /* Freepetitor */ = {
 			isa = PBXGroup;
 			children = (
+				5C899319290E90CC004C872C /* ViewModel */,
+				5C899318290E90C3004C872C /* View */,
+				5C899317290E90BB004C872C /* Model */,
 				5C899309290E9073004C872C /* FreepetitorApp.swift */,
 				5C89930B290E9073004C872C /* ContentView.swift */,
 				5C89930D290E9077004C872C /* Assets.xcassets */,
@@ -65,6 +68,27 @@
 				5C899310290E9077004C872C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5C899317290E90BB004C872C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5C899318290E90C3004C872C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5C899319290E90CC004C872C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
