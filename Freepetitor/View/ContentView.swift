@@ -12,7 +12,6 @@ struct ContentView: View {
     @State var surnameTextFieldText: String = ""
     @State var savedText: [String] = []
     
-    
     var body: some View {
         NavigationView {
             VStack {

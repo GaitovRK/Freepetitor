@@ -24,28 +24,35 @@ struct FilterView: View {
     
     var body: some View {
         
-        List {
-            Picker("Preferred Languages", selection: $selectedLanguage) {
-                ForEach(languages, id: \.self) { language in
-                    Text(language)
-                }
-                
-                Button {
+        NavigationView {
+            List {
+                Picker("Preferred Languages", selection: $selectedLanguage) {
+                    ForEach(languages, id: \.self) { language in
+                        Text(language)
+                    }
                     
-                } label: {
-                    Text("Add Language...")
-                }
+                    Button {
+                        
+                    } label: {
+                        Text("Add Language...")
+                    }
 
-            }
-            .pickerStyle(.inline)
-            
-            Picker("Region", selection: $selectedCountry) {
-                ForEach(countries, id: \.self) { country in
-                    Text(country)
                 }
+                .pickerStyle(.inline)
+                
+                Picker("Region", selection: $selectedCountry) {
+                    ForEach(countries, id: \.self) { country in
+                        Text(country)
+                    }
+                }
+                .pickerStyle(.automatic)
             }
-            .pickerStyle(.automatic)
+            .navigationTitle("Settings")
+            .navigationBarTitleDisplayMode(.inline)
+            
         }
+        
+        
     }
 }
 
