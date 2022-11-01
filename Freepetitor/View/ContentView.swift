@@ -11,12 +11,7 @@ struct ContentView: View {
     @State var nameTextFieldText: String = ""
     @State var surnameTextFieldText: String = ""
     @State var savedText: [String] = []
-    @State var selectedCountry = " "
-    @State var countries = [
-        "Kazakhstan",
-        "Poland",
-        "Turkey",
-        "Japan"]
+    
     
     var body: some View {
         NavigationView {
@@ -33,7 +28,7 @@ struct ContentView: View {
                     saveText(text: surnameTextFieldText)
                     nameTextFieldText = ""
                     surnameTextFieldText = ""
-
+                    GalleryView(teachers: [TeacherInfo(name: "Rashid", surname: "Gaitov", description: "Top teacher", image: "img1")])
                 }, label: {
                     Text("LOGIN")
                         .frame(maxWidth: .infinity)
@@ -43,17 +38,6 @@ struct ContentView: View {
                         .font(.headline)
                 })
                 .padding()
-                
-                List {
-                    Picker("Choose country", selection: $selectedCountry) {
-                        
-                        ForEach(countries, id: \.self) { country in
-                            Text(country)
-                        }
-                    }
-                    .pickerStyle(.wheel)
-                }
-
                 
                 Spacer()
             }

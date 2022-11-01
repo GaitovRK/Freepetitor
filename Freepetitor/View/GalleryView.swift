@@ -19,9 +19,19 @@ struct GalleryView: View {
     
     var body: some View {
         NavigationView {
-            List {
-                ForEach(teachers, id: \.self) { teacher in
-                    TeacherView(teacherName: teacher.name, teacherSurname: teacher.surname, teacherDescription: teacher.description, teacherImage: teacher.image)
+            
+            VStack {
+                
+                List {
+                    Button {
+                        FilterView()
+                    } label: {
+                        Image(systemName: "slider.horizontal.3")
+                    }
+                    
+                    ForEach(teachers, id: \.self) { teacher in
+                        TeacherView(teacherName: teacher.name, teacherSurname: teacher.surname, teacherDescription: teacher.description, teacherImage: teacher.image)
+                    }
                 }
             }
             .navigationTitle("Teachers")
