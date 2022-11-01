@@ -7,13 +7,6 @@
 
 import SwiftUI
 
-struct TeacherInfo: Hashable {
-    var name: String
-    var surname: String
-    var description: String
-    var image: String
-}
-
 struct GalleryView: View {
     var teachers: [TeacherInfo]
     

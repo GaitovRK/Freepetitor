@@ -32,11 +32,10 @@ struct FilterView: View {
                     }
                     
                     Button {
-                        
                     } label: {
                         Text("Add Language...")
                     }
-
+                    
                 }
                 .pickerStyle(.inline)
                 
@@ -46,13 +45,12 @@ struct FilterView: View {
                     }
                 }
                 .pickerStyle(.automatic)
+                
             }
             .navigationTitle("Settings")
             .navigationBarTitleDisplayMode(.inline)
             
         }
-        
-        
     }
 }
 

@@ -13,6 +13,8 @@
 		5C89930E290E9077004C872C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C89930D290E9077004C872C /* Assets.xcassets */; };
 		5C899311290E9077004C872C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C899310290E9077004C872C /* Preview Assets.xcassets */; };
 		5C98A94B291119EF008546F0 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C98A94A291119EF008546F0 /* FilterView.swift */; };
+		5C98A94D29114014008546F0 /* TeachersData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C98A94C29114014008546F0 /* TeachersData.swift */; };
+		5C98A94F291140EF008546F0 /* SettingsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C98A94E291140EF008546F0 /* SettingsData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		5C89930D290E9077004C872C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C899310290E9077004C872C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5C98A94A291119EF008546F0 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		5C98A94C29114014008546F0 /* TeachersData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachersData.swift; sourceTree = "<group>"; };
+		5C98A94E291140EF008546F0 /* SettingsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,8 @@
 		5C899317290E90BB004C872C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5C98A94C29114014008546F0 /* TeachersData.swift */,
+				5C98A94E291140EF008546F0 /* SettingsData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -167,7 +173,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C98A94D29114014008546F0 /* TeachersData.swift in Sources */,
 				5C98A94B291119EF008546F0 /* FilterView.swift in Sources */,
+				5C98A94F291140EF008546F0 /* SettingsData.swift in Sources */,
 				5C89930C290E9073004C872C /* ContentView.swift in Sources */,
 				5C845D73290FE8B1009D98F6 /* GalleryView.swift in Sources */,
 				5C89930A290E9073004C872C /* FreepetitorApp.swift in Sources */,
