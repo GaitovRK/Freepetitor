@@ -9,26 +9,17 @@ import SwiftUI
 
 struct FilterView: View {
     
-    @State var selectedCountry = "Kazakhstan"
-    @State var selectedLanguage = "English"
-    @State var countries = [
-        "Kazakhstan",
-        "Poland",
-        "Turkey",
-        "Japan"]
-    @State var languages = [
-        "English",
-        "Казакша",
-        "Türkçe",
-        "Русский"]
+    @State var selectedCountry = Country.turkey
+    @State var selectedLanguage = Language.turkish
+    @State var languages = Language.allCases
+    @State var countries = Country.allCases
     
     var body: some View {
-        
         NavigationView {
             List {
                 Picker("Preferred Languages", selection: $selectedLanguage) {
                     ForEach(languages, id: \.self) { language in
-                        Text(language)
+                        Text(language.rawValue)
                     }
                     
                     Button {
@@ -41,7 +32,7 @@ struct FilterView: View {
                 
                 Picker("Region", selection: $selectedCountry) {
                     ForEach(countries, id: \.self) { country in
-                        Text(country)
+                        Text(country.rawValue)
                     }
                 }
                 .pickerStyle(.automatic)
