@@ -8,24 +8,29 @@
 import SwiftUI
 
 struct GalleryView: View {
-//    var teachers: [TeacherInfo]
     
     @State private var showFilterView = false
     
     var body: some View {
-        NavigationView {
-            
             VStack {
                 
-                List {
+                HStack {
+                    Spacer()
+                    
                     Button {
                         self.showFilterView.toggle()
                     } label: {
                         Image(systemName: "slider.horizontal.3")
+                            .padding()
                     }
                     .sheet(isPresented: $showFilterView) {
                         FilterView()
                     }
+                }
+                
+                
+                List {
+                   
                     
                     ForEach(teachers, id: \.self) { teacher in
                         TeacherView(teacherName: teacher.name, teacherSurname: teacher.surname, teacherDescription: teacher.description, teacherImage: teacher.image)
@@ -33,7 +38,6 @@ struct GalleryView: View {
                 }
             }
             .navigationTitle("Teachers")
-        }
         
     }
 }

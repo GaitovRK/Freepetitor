@@ -12,8 +12,10 @@ struct ContentView: View {
     @State var surnameTextFieldText: String = ""
     @State var savedText: [String] = []
     
+    
     var body: some View {
         NavigationView {
+            
             VStack {
                 VStack {
                 TextField("Name", text: $nameTextFieldText)
@@ -22,21 +24,34 @@ struct ContentView: View {
                 .padding()
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 
-                Button(action: {
-                    saveText(text: nameTextFieldText)
-                    saveText(text: surnameTextFieldText)
-                    nameTextFieldText = ""
-                    surnameTextFieldText = ""
+                NavigationLink {
                     GalleryView()
-                }, label: {
+                } label: {
                     Text("LOGIN")
                         .frame(maxWidth: .infinity)
                         .padding()
                         .background(Color.blue.cornerRadius(15))
                         .foregroundColor(Color.white)
                         .font(.headline)
-                })
+                }
                 .padding()
+
+                
+//                Button(action: {
+//                    saveText(text: nameTextFieldText)
+//                    saveText(text: surnameTextFieldText)
+//                    nameTextFieldText = ""
+//                    surnameTextFieldText = ""
+//                    GalleryView()
+//                }, label: {
+//                    Text("LOGIN")
+//                        .frame(maxWidth: .infinity)
+//                        .padding()
+//                        .background(Color.blue.cornerRadius(15))
+//                        .foregroundColor(Color.white)
+//                        .font(.headline)
+//                })
+//                .padding()
                 
                 Spacer()
             }
