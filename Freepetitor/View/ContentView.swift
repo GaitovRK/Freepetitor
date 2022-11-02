@@ -32,7 +32,7 @@ struct ContentView: View {
                 NavigationLink {
                     GalleryView()
                 } label: {
-                    Text("Register")
+                    Text("Sign Up")
                         .frame(maxWidth: .infinity)
                         .padding()
                         .background(Color.blue.cornerRadius(15))
@@ -43,11 +43,10 @@ struct ContentView: View {
 
                 Spacer()
             }
-            .navigationTitle("Login")
+            .navigationTitle("Sign Up")
             
         }
     }
-    
 }
 
 struct ContentView_Previews: PreviewProvider {
