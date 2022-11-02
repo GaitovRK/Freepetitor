@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct GalleryView: View {
-    var teachers: [TeacherInfo]
+//    var teachers: [TeacherInfo]
+    
+    @State private var showFilterView = false
     
     var body: some View {
         NavigationView {
@@ -17,9 +19,12 @@ struct GalleryView: View {
                 
                 List {
                     Button {
-                        FilterView()
+                        self.showFilterView.toggle()
                     } label: {
                         Image(systemName: "slider.horizontal.3")
+                    }
+                    .sheet(isPresented: $showFilterView) {
+                        FilterView()
                     }
                     
                     ForEach(teachers, id: \.self) { teacher in
@@ -35,12 +40,7 @@ struct GalleryView: View {
 
 struct GalleryView_Previews: PreviewProvider {
     static var previews: some View {
-        GalleryView(teachers: [
-                                TeacherInfo(name: "Rashid", surname: "Gaitov", description: "Physics teacher", image: "img1"),
-                                TeacherInfo(name: "Nazife", surname: "Kirca", description: "English and math teacher", image: "nazo"),
-                                TeacherInfo(name: "Chingiz", surname: "Aitmatov", description: "Literature teacher", image: " "),
-                                TeacherInfo(name: "Leonardo", surname: "Da Vinci", description: "Engineering teacher", image: " ")
-        ])
+        GalleryView()
     }
 }
 

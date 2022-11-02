@@ -27,7 +27,7 @@ struct ContentView: View {
                     saveText(text: surnameTextFieldText)
                     nameTextFieldText = ""
                     surnameTextFieldText = ""
-                    GalleryView(teachers: [TeacherInfo(name: "Rashid", surname: "Gaitov", description: "Top teacher", image: "img1")])
+                    GalleryView()
                 }, label: {
                     Text("LOGIN")
                         .frame(maxWidth: .infinity)

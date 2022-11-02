@@ -32,4 +32,3 @@ var userSettings = Settings(
     countryOfSearch: Country.kazakhstan,
     studyLanguage: Language.turkish,
     speakingLanguage: Language.english)
-
