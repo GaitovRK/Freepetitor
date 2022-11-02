@@ -10,8 +10,10 @@ import SwiftUI
 struct ContentView: View {
     @State var nameTextFieldText: String = ""
     @State var surnameTextFieldText: String = ""
-    @State var savedText: [String] = []
-    
+    @State var profilePhoto: Image = Image("blank")
+    @State var universityTextFieldText: String = ""
+    @State var departmentTextFieldText: String = ""
+    @State var descriptionTextFieldText: String = ""
     
     var body: some View {
         NavigationView {
@@ -20,6 +22,9 @@ struct ContentView: View {
                 VStack {
                 TextField("Name", text: $nameTextFieldText)
                 TextField("Surname", text: $surnameTextFieldText)
+                TextField("University", text: $universityTextFieldText)
+                TextField("Department", text: $departmentTextFieldText)
+                TextField("Description", text: $descriptionTextFieldText)
                 }
                 .padding()
                 .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -27,7 +32,7 @@ struct ContentView: View {
                 NavigationLink {
                     GalleryView()
                 } label: {
-                    Text("LOGIN")
+                    Text("Register")
                         .frame(maxWidth: .infinity)
                         .padding()
                         .background(Color.blue.cornerRadius(15))
@@ -36,34 +41,13 @@ struct ContentView: View {
                 }
                 .padding()
 
-                
-//                Button(action: {
-//                    saveText(text: nameTextFieldText)
-//                    saveText(text: surnameTextFieldText)
-//                    nameTextFieldText = ""
-//                    surnameTextFieldText = ""
-//                    GalleryView()
-//                }, label: {
-//                    Text("LOGIN")
-//                        .frame(maxWidth: .infinity)
-//                        .padding()
-//                        .background(Color.blue.cornerRadius(15))
-//                        .foregroundColor(Color.white)
-//                        .font(.headline)
-//                })
-//                .padding()
-                
                 Spacer()
             }
             .navigationTitle("Login")
-
+            
         }
-
     }
     
-    func saveText(text: String) {
-        savedText.append(text)
-    }
 }
 
 struct ContentView_Previews: PreviewProvider {

@@ -13,10 +13,15 @@ struct GalleryView: View {
     
     var body: some View {
             VStack {
-                
-                HStack {
-                    Spacer()
-                    
+                List {
+                    ForEach(teachers, id: \.self) { teacher in
+                        TeacherView(teacherName: teacher.name, teacherSurname: teacher.surname, teacherDescription: teacher.description, teacherImage: teacher.image)
+                    }
+                }
+            }
+            .navigationTitle("Teachers")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         self.showFilterView.toggle()
                     } label: {
@@ -27,17 +32,9 @@ struct GalleryView: View {
                         FilterView()
                     }
                 }
-                
-                
-                List {
-                   
-                    
-                    ForEach(teachers, id: \.self) { teacher in
-                        TeacherView(teacherName: teacher.name, teacherSurname: teacher.surname, teacherDescription: teacher.description, teacherImage: teacher.image)
-                    }
-                }
             }
-            .navigationTitle("Teachers")
+
+        
         
     }
 }
