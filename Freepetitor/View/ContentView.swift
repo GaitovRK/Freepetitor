@@ -8,44 +8,45 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var nameTextFieldText: String = ""
-    @State var surnameTextFieldText: String = ""
-    @State var profilePhoto: Image = Image("blank")
-    @State var universityTextFieldText: String = ""
-    @State var departmentTextFieldText: String = ""
-    @State var descriptionTextFieldText: String = ""
-    @State var selectedUniversity: University = University.bogazici
-    var universities = University.allCases
+    @State private var nameTextFieldText: String = ""
+    @State private var surnameTextFieldText: String = ""
+    @State private var profilePhoto: Image = Image("blank")
+    @State private var descriptionTextFieldText: String = ""
+    @State private var selectedUniversity: University = University.bogazici
+    @State private var birthDate = Date()
+    private var universities = University.allCases
     
     var body: some View {
         NavigationView {
             VStack {
-                List {
-                    TextField("Name", text: $nameTextFieldText)
-                    TextField("Surname", text: $surnameTextFieldText)
-                    TextField("Department", text: $departmentTextFieldText)
-                    TextField("Description", text: $descriptionTextFieldText)
-                    
-                    Picker("University", selection: $selectedUniversity) {
-                        ForEach(universities, id: \.self) { university in
-                            Text(university.rawValue)
-                        }
+                Form {
+                    Section {
+                        TextField("Name", text: $nameTextFieldText)
+                        TextField("Surname", text: $surnameTextFieldText)
+                        TextField("Write about yourself", text: $descriptionTextFieldText)
                     }
-                    .pickerStyle(.automatic)
+                    
+                    Section {
+                        DatePicker("Birthdate", selection: $birthDate, displayedComponents: .date)
+                        
+                        Picker("University", selection: $selectedUniversity) {
+                            ForEach(universities, id: \.self) { university in
+                                Text(university.rawValue)
+                            }
+                        }
+                        .pickerStyle(.automatic)
+                    }
+                    
+                    NavigationLink {
+//                        teachers.append(TeacherInfo(name: nameTextFieldText, surname: surnameTextFieldText, university: selectedUniversity, description: descriptionTextFieldText))
+                        GalleryView()
+                    } label: {
+                        Text("Sign Up")
+//                            .foregroundColor(.blue)
+                    }
+                    
                 }
-                
-                NavigationLink {
-                    GalleryView()
-                } label: {
-                    Text("Sign Up")
-                        .frame(maxWidth: .infinity)
-                        .padding()
-                        .background(Color.blue.cornerRadius(15))
-                        .foregroundColor(Color.white)
-                        .font(.headline)
-                }
-                .padding()
-                
+                .accentColor(.blue)
             }
             .navigationTitle("Sign Up")
             
