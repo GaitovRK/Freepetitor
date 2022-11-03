@@ -14,6 +14,9 @@ struct ContentView: View {
     @State var universityTextFieldText: String = ""
     @State var departmentTextFieldText: String = ""
     @State var descriptionTextFieldText: String = ""
+    @State var selectedUniversity: University = University.bogazici
+    var universities = University.allCases
+
     
     var body: some View {
         NavigationView {
@@ -22,7 +25,16 @@ struct ContentView: View {
                 VStack {
                 TextField("Name", text: $nameTextFieldText)
                 TextField("Surname", text: $surnameTextFieldText)
-                TextField("University", text: $universityTextFieldText)
+                
+                    
+                        Picker("University", selection: $selectedUniversity) {
+                            ForEach(universities, id: \.self) { university in
+                                Text(university.rawValue)
+                            }
+                        }
+                        .pickerStyle(.automatic)
+                    
+
                 TextField("Department", text: $departmentTextFieldText)
                 TextField("Description", text: $descriptionTextFieldText)
                 }
