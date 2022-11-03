@@ -18,6 +18,7 @@ struct GalleryView: View {
                     ForEach(universities, id: \.self) { university in
                         SectionView(universityName: university.rawValue)
                     }
+                    
                 }
             }
             .navigationTitle("Teachers")
@@ -57,7 +58,7 @@ struct TeacherView: View {
                 Text(teacherName + " " + teacherSurname)
                     .fontWeight(.bold)
                 Text(teacherDescription)
-                    .fontWeight(.light)
+                    .font(.subheadline)
             }
             Spacer()
             Image(teacherImage)
