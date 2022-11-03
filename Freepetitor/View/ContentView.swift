@@ -16,30 +16,23 @@ struct ContentView: View {
     @State var descriptionTextFieldText: String = ""
     @State var selectedUniversity: University = University.bogazici
     var universities = University.allCases
-
     
     var body: some View {
         NavigationView {
-            
             VStack {
-                VStack {
-                TextField("Name", text: $nameTextFieldText)
-                TextField("Surname", text: $surnameTextFieldText)
-                
+                List {
+                    TextField("Name", text: $nameTextFieldText)
+                    TextField("Surname", text: $surnameTextFieldText)
+                    TextField("Department", text: $departmentTextFieldText)
+                    TextField("Description", text: $descriptionTextFieldText)
                     
-                        Picker("University", selection: $selectedUniversity) {
-                            ForEach(universities, id: \.self) { university in
-                                Text(university.rawValue)
-                            }
+                    Picker("University", selection: $selectedUniversity) {
+                        ForEach(universities, id: \.self) { university in
+                            Text(university.rawValue)
                         }
-                        .pickerStyle(.automatic)
-                    
-
-                TextField("Department", text: $departmentTextFieldText)
-                TextField("Description", text: $descriptionTextFieldText)
+                    }
+                    .pickerStyle(.automatic)
                 }
-                .padding()
-                .textFieldStyle(RoundedBorderTextFieldStyle())
                 
                 NavigationLink {
                     GalleryView()
@@ -52,8 +45,7 @@ struct ContentView: View {
                         .font(.headline)
                 }
                 .padding()
-
-                Spacer()
+                
             }
             .navigationTitle("Sign Up")
             
