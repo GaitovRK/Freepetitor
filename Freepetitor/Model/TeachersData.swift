@@ -26,11 +26,13 @@ public var teachers = [TeacherInfo(name: "Rashid", surname: "Gaitov", university
                        TeacherInfo(name: "Che", surname: "Gevara", university: .harvard, description: "Politics teacher"),
                        TeacherInfo(name: "Kasym-Zhomart", surname: "Tokayev", university: .nazarbayev, description: "Politics teacher"),
                        TeacherInfo(name: "Mikkey", surname: "Mouse", university: .harvard, description: "Animation teacher"),
+                       TeacherInfo(name: "Steve", surname: "Jobs", university: .stanford, description: "iOS Teacher")
 ]
 
 enum University: String, CaseIterable {
     case bogazici = "Boğaziçi University"
     case nazarbayev = "Nazarbayev University"
     case harvard = "Harvard College"
+    case stanford = "Stanford University"
 }
 

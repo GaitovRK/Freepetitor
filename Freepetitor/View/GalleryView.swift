@@ -15,15 +15,9 @@ struct GalleryView: View {
     var body: some View {
             VStack {
                 List {
-                    
-//                    ForEach(University) { university in
-//                        <#code#>
-//                    }
-                    
-                    SectionView(universityName: University.bogazici.rawValue)
-                    SectionView(universityName: University.nazarbayev.rawValue)
-                    SectionView(universityName: University.harvard.rawValue)
-                    
+                    ForEach(universities, id: \.self) { university in
+                        SectionView(universityName: university.rawValue)
+                    }
                 }
             }
             .navigationTitle("Teachers")
