@@ -10,13 +10,20 @@ import SwiftUI
 struct GalleryView: View {
     
     @State private var showFilterView = false
+    var universities = University.allCases
     
     var body: some View {
             VStack {
                 List {
-                    ForEach(teachers, id: \.self) { teacher in
-                        TeacherView(teacherName: teacher.name, teacherSurname: teacher.surname, teacherDescription: teacher.description, teacherImage: teacher.image)
-                    }
+                    
+//                    ForEach(University) { university in
+//                        <#code#>
+//                    }
+                    
+                    SectionView(universityName: University.bogazici.rawValue)
+                    SectionView(universityName: University.nazarbayev.rawValue)
+                    SectionView(universityName: University.harvard.rawValue)
+                    
                 }
             }
             .navigationTitle("Teachers")
@@ -62,9 +69,25 @@ struct TeacherView: View {
             Image(teacherImage)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(height: 60)
+                .frame(width: 40, height: 60)
                 .cornerRadius(8)
         }
     }
-    
 }
+
+
+struct SectionView: View {
+    var universityName: String
+    var body: some View {
+        Section {
+            ForEach(teachers, id: \.self) { teacher in
+                if teacher.university.rawValue == universityName {
+                    TeacherView(teacherName: teacher.name, teacherSurname: teacher.surname, teacherDescription: teacher.description, teacherImage: teacher.image)
+                }
+            }
+        } header: {
+            Text(universityName)
+        }
+    }
+}
+
