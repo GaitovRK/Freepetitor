@@ -10,15 +10,15 @@ import SwiftUI
 struct GalleryView: View {
     
     @State private var showFilterView = false
-    var universities = University.allCases
+    private var universities = University.allCases
+    private var teachers = TeachersViewModel.init()
     
     var body: some View {
             VStack {
                 List {
                     ForEach(universities, id: \.self) { university in
-                        SectionView(universityName: university.rawValue)
+                        SectionView(teachers: teachers, universityName: university.rawValue)
                     }
-                    
                 }
             }
             .navigationTitle("Teachers")
@@ -72,6 +72,7 @@ struct TeacherView: View {
 
 
 struct SectionView: View {
+    var teachers: [TeacherInfo]
     var universityName: String
     var body: some View {
         Section {

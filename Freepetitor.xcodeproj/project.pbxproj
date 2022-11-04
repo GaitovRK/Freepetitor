@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5C0EEDB42912ABD300D7BECB /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0EEDB32912ABD300D7BECB /* RegisterViewModel.swift */; };
+		5C81628B2914F811004D3724 /* TeachersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C81628A2914F811004D3724 /* TeachersViewModel.swift */; };
 		5C845D73290FE8B1009D98F6 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C845D72290FE8B1009D98F6 /* GalleryView.swift */; };
 		5C89930A290E9073004C872C /* FreepetitorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C899309290E9073004C872C /* FreepetitorApp.swift */; };
 		5C89930C290E9073004C872C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C89930B290E9073004C872C /* ContentView.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		5C0EEDB32912ABD300D7BECB /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		5C81628A2914F811004D3724 /* TeachersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachersViewModel.swift; sourceTree = "<group>"; };
 		5C845D72290FE8B1009D98F6 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
 		5C899306290E9073004C872C /* Freepetitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Freepetitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C899309290E9073004C872C /* FreepetitorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreepetitorApp.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				5C0EEDB32912ABD300D7BECB /* RegisterViewModel.swift */,
+				5C81628A2914F811004D3724 /* TeachersViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				5C0EEDB42912ABD300D7BECB /* RegisterViewModel.swift in Sources */,
 				5C98A94F291140EF008546F0 /* SettingsData.swift in Sources */,
 				5C89930C290E9073004C872C /* ContentView.swift in Sources */,
+				5C81628B2914F811004D3724 /* TeachersViewModel.swift in Sources */,
 				5C845D73290FE8B1009D98F6 /* GalleryView.swift in Sources */,
 				5C89930A290E9073004C872C /* FreepetitorApp.swift in Sources */,
 			);

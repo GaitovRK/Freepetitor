@@ -28,6 +28,7 @@ struct ContentView: View {
                     
                     Section {
                         DatePicker("Birthdate", selection: $birthDate, displayedComponents: .date)
+                            .datePickerStyle(.compact)
                         
                         Picker("University", selection: $selectedUniversity) {
                             ForEach(universities, id: \.self) { university in
@@ -42,14 +43,11 @@ struct ContentView: View {
                         GalleryView()
                     } label: {
                         Text("Sign Up")
-//                            .foregroundColor(.blue)
                     }
-                    
                 }
-                .accentColor(.blue)
+                .navigationTitle("Sign Up")
+
             }
-            .navigationTitle("Sign Up")
-            
         }
     }
 }
