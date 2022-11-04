@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct TeacherInfo: Hashable {
+struct TeacherInfo: Hashable {
     var name: String
     var surname: String
     var university: University
@@ -17,7 +17,7 @@ public struct TeacherInfo: Hashable {
 
 struct TeachersData {
     
-    var teachers = [TeacherInfo(name: "Rashid", surname: "Gaitov", university: .nazarbayev, description: "Physics teacher", image: "img1"),
+    private var teachers = [TeacherInfo(name: "Rashid", surname: "Gaitov", university: .nazarbayev, description: "Physics teacher", image: "img1"),
                             TeacherInfo(name: "Nazife", surname: "Kirca", university: .bogazici, description: "English and math teacher", image: "nazo"),
                             TeacherInfo(name: "Chingiz", surname: "Aitmatov", university: .nazarbayev, description: "Literature teacher"),
                             TeacherInfo(name: "Leonardo", surname: "Da Vinci", university: .harvard, description: "Engineering teacher"),
@@ -31,7 +31,9 @@ struct TeachersData {
                             TeacherInfo(name: "Steve", surname: "Jobs", university: .stanford, description: "iOS Teacher")
      ]
     
-    TeachersViewModel(teachers: teachers)
+    func getTeachers() -> [TeacherInfo] {
+        return teachers
+    }
 }
 
 

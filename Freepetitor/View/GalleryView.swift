@@ -11,7 +11,8 @@ struct GalleryView: View {
     
     @State private var showFilterView = false
     private var universities = University.allCases
-    private var teachers = TeachersViewModel.init()
+    var teachersArray = TeachersData()
+    private var teachers = teachersArray.getTeachers()
     
     var body: some View {
             VStack {
