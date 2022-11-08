@@ -12,13 +12,13 @@ struct GalleryView: View {
     @State private var showFilterView = false
     private var universities = University.allCases
     var teachersArray = TeachersData()
-    private var teachers = teachersArray.getTeachers()
+    
     
     var body: some View {
             VStack {
                 List {
                     ForEach(universities, id: \.self) { university in
-                        SectionView(teachers: teachers, universityName: university.rawValue)
+                        SectionView(teachers: teachersArray.teachers, universityName: university.rawValue)
                     }
                 }
             }

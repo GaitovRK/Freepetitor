@@ -39,7 +39,7 @@ struct ContentView: View {
                     }
                     
                     NavigationLink {
-//                        teachers.append(TeacherInfo(name: nameTextFieldText, surname: surnameTextFieldText, university: selectedUniversity, description: descriptionTextFieldText))
+                        teachers.append(TeacherInfo(name: nameTextFieldText, surname: surnameTextFieldText, university: selectedUniversity, description: descriptionTextFieldText))
                         GalleryView()
                     } label: {
                         Text("Sign Up")
