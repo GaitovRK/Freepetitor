@@ -15,6 +15,8 @@ struct ContentView: View {
     @State private var selectedUniversity: University = University.bogazici
     @State private var birthDate = Date()
     private var universities = University.allCases
+    var teachersArray = TeachersData()
+
     
     var body: some View {
         NavigationView {
@@ -39,7 +41,8 @@ struct ContentView: View {
                     }
                     
                     NavigationLink {
-                        teachers.append(TeacherInfo(name: nameTextFieldText, surname: surnameTextFieldText, university: selectedUniversity, description: descriptionTextFieldText))
+//                        teachersArray.addTeacher(newTeacher: TeacherInfo(name: nameTextFieldText, surname: surnameTextFieldText, university: selectedUniversity, description: descriptionTextFieldText))
+//                            .addTeacher(teacher: TeacherInfo(name: nameTextFieldText, surname: surnameTextFieldText, university: selectedUniversity, description: descriptionTextFieldText))
                         GalleryView()
                     } label: {
                         Text("Sign Up")

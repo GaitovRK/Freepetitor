@@ -37,7 +37,9 @@ struct TeachersData {
         }
     }
     
-    
+    mutating func addTeacher(newTeacher: TeacherInfo) {
+        _teachers.append(newTeacher)
+    }
 }
 
 enum University: String, CaseIterable {
