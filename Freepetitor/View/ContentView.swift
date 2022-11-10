@@ -15,7 +15,8 @@ struct ContentView: View {
     @State private var selectedUniversity: University = University.bogazici
     @State private var birthDate = Date()
     private var universities = University.allCases
-    var teachersArray = TeachersData()
+    
+//    var teachersArray = TeachersData()
 
     
     var body: some View {

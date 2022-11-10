@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C0D7134291D8A1900430675 /* TeacherDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0D7133291D8A1900430675 /* TeacherDetailsView.swift */; };
 		5C0EEDB42912ABD300D7BECB /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0EEDB32912ABD300D7BECB /* RegisterViewModel.swift */; };
 		5C81628B2914F811004D3724 /* TeachersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C81628A2914F811004D3724 /* TeachersViewModel.swift */; };
 		5C845D73290FE8B1009D98F6 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C845D72290FE8B1009D98F6 /* GalleryView.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C0D7133291D8A1900430675 /* TeacherDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherDetailsView.swift; sourceTree = "<group>"; };
 		5C0EEDB32912ABD300D7BECB /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		5C81628A2914F811004D3724 /* TeachersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachersViewModel.swift; sourceTree = "<group>"; };
 		5C845D72290FE8B1009D98F6 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				5C89930B290E9073004C872C /* ContentView.swift */,
 				5C845D72290FE8B1009D98F6 /* GalleryView.swift */,
 				5C98A94A291119EF008546F0 /* FilterView.swift */,
+				5C0D7133291D8A1900430675 /* TeacherDetailsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C98A94D29114014008546F0 /* TeachersData.swift in Sources */,
+				5C0D7134291D8A1900430675 /* TeacherDetailsView.swift in Sources */,
 				5C98A94B291119EF008546F0 /* FilterView.swift in Sources */,
 				5C0EEDB42912ABD300D7BECB /* RegisterViewModel.swift in Sources */,
 				5C98A94F291140EF008546F0 /* SettingsData.swift in Sources */,

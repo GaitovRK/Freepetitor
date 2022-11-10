@@ -9,4 +9,6 @@ import Foundation
 
 struct RegisterTeacher {
     
+    var teachersArray = TeachersData()
+
 }
