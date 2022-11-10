@@ -9,9 +9,7 @@ import SwiftUI
 
 struct TeacherDetailsView: View {
     var body: some View {
-        
         Header()
-        
     }
 }
 
@@ -30,8 +28,8 @@ struct Header: View {
                     .scaledToFit()
                     .frame(width: 100)
                     .cornerRadius(40)
-                
             }
+            
             VStack {
                 Text("Rashid Gaitov")
                     .font(.title2)
@@ -40,13 +38,10 @@ struct Header: View {
             }
             
             List {
-
                 EducationView()
-                
                 ExperienceView()
-                
-                
             }
+            
             Spacer()
         }
     }
@@ -82,8 +77,18 @@ struct ExperienceView: View {
     var body: some View {
         
         Section {
-            Text("Experience 1")
-            Text("Experience 2")
+            VStack(alignment: .leading) {
+                Text("Andersen Lab")
+                    .font(.headline)
+                Text("iOS Developer")
+                    .font(.callout)
+            }
+            VStack(alignment: .leading) {
+                Text("Jusan Bank")
+                    .font(.headline)
+                Text("iOS Engineer")
+                    .font(.callout)
+            }
 
         } header: {
             Text("Experience")
